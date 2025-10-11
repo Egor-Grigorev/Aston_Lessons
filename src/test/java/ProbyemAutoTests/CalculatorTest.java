@@ -1,4 +1,5 @@
-import com.beust.jcommander.Parameter;
+package ProbyemAutoTests;
+
 import org.example.ProbyemAutoTests.Calculator;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
