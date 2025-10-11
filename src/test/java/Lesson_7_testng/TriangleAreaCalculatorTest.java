@@ -7,10 +7,10 @@ import org.testng.annotations.Test;
 public class TriangleAreaCalculatorTest {
 
     //----------------------------------------------------------
-    @Test(description = "Проверка операции сложения")
+    @Test(description = "Проверка вычисления площади треугольника")
     public void testСalculateTriangleArea() {
 
-        Assert.assertEquals(TriangleAreaCalculator.calculateTriangleArea(10, 3), 15);
+        Assert.assertEquals(TriangleAreaCalculator.calculateTriangleArea(10, 4), 20);
     }
 
 }
