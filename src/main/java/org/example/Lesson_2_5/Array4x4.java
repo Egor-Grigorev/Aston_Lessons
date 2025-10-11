@@ -1,32 +1,14 @@
-package Lesson_2_5;
+package org.example.Lesson_2_5;
 
+import java.util.Arrays;
 
-
-class MyArraySizeException extends Exception {
-    public MyArraySizeException(String message) {
-        super(message);
-    }
-}
-
-class MyArrayDataException extends Exception {
-    public MyArrayDataException(String message) {
-        super(message);
-    }
-}
-
-public class Array_4_x_4 {
+public class Array4x4 {
 
     // Метод для суммирования элементов массива
     public static int sumArrayElements(String[][] array) throws MyArraySizeException, MyArrayDataException {
         // Проверяем размер массива
-        if (array.length != 4) {
-            throw new MyArraySizeException("Массив должен быть размером 4х4. Получено строк: " + array.length);
-        }
-
-        for (int i = 0; i < array.length; i++) {
-            if (array[i].length != 4) {
-                throw new MyArraySizeException("Каждая строка должна содержать 4 элемента. Строка " + i + " содержит: " + array[i].length);
-            }
+        if (array.length != 4 || Arrays.stream(array).anyMatch(row -> row.length != 4)) {
+            throw new MyArraySizeException("Массив должен быть размером 4×4.");
         }
 
         int sum = 0;
@@ -51,22 +33,21 @@ public class Array_4_x_4 {
     public static void demonstrateArrayIndexOutOfBounds() {
         System.out.println("\n=== Демонстрация ArrayIndexOutOfBoundsException ===");
 
-        int[] smallArray = {1, 2, 3}; // Массив всего из 3 элементов
+        int[] smallArray = {1, 2, 3};
 
         try {
-            // Пытаемся обратиться к несуществующему элементу
+            // Обращаемся к несуществующему элементу
             System.out.println("Попытка обратиться к элементу с индексом 5...");
-            int value = smallArray[5]; // Здесь произойдет исключение!
-            System.out.println("Значение: " + value); // Эта строка не выполнится
+            int value = smallArray[5];
+            System.out.println("Значение: " + value);
         } catch (ArrayIndexOutOfBoundsException e) {
             System.out.println("Поймано ArrayIndexOutOfBoundsException!");
             System.out.println("Сообщение: " + e.getMessage());
-            System.out.println("Рекомендация: всегда проверяйте границы массива перед обращением к элементам");
+            System.out.println("Рекомендация: Всегда проверяйте индексы массива перед доступом к элементам.");
         }
     }
 
     public static void main(String[] args) {
-
         // Тест 1: Корректный массив
         System.out.println("=== Тест 1: Корректный массив ===");
         String[][] correctArray = {
@@ -122,3 +103,4 @@ public class Array_4_x_4 {
         demonstrateArrayIndexOutOfBounds();
     }
 }
+
