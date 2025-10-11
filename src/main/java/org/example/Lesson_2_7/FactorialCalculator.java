@@ -1,7 +1,7 @@
 package org.example.Lesson_2_7;
 
 public class FactorialCalculator {
-    public static long factorial(int n) {
+    public static int factorial(int n) {
         if (n < 0)
             throw new IllegalArgumentException("Факториал отрицательного числа невозможен");
 

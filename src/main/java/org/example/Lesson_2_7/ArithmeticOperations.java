@@ -16,7 +16,7 @@ public class ArithmeticOperations {
 
     public static int divide(int x, int y) throws ArithmeticException {
         if (y == 0) {
-            throw new ArithmeticException("Деление на ноль невозможно!");
+            throw new ArithmeticException("Деление на ноль недопустимо.");
         }
         return x / y;
     }
