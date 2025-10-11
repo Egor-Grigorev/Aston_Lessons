@@ -1,7 +1,6 @@
 package Lesson_7_junit_5;
 
 import org.example.Lesson_2_7.ArithmeticOperations;
-import org.example.ProbyemAutoTests.Calculator;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
