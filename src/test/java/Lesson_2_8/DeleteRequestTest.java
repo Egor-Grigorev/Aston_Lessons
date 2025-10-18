@@ -26,7 +26,7 @@ public class DeleteRequestTest {
                 .when()
                 .delete("/delete")
                 .then()
-                //.statusCode(200) // Эквивалент pm.response.to.have.status(200)
-                .body("data", equalTo("This is expected to be sent back as part of response body.")); // Эквивалент pm.response.to.have.jsonBody('data', '...')
+                //.statusCode(200) //
+                .body("data", equalTo("This is expected to be sent back as part of response body."));
     }
 }

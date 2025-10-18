@@ -18,7 +18,7 @@ public class PatchRequestTest {
                 .patch("/patch")
                 .then()
                 .statusCode(200) // Проверка статус кода
-                .body("data", equalTo("This is expected to be sent back as part of response body.")); // Проверка поля data
+                .body("data", equalTo("This is expected to be sent back as part of response body."));
     }*/
    @Test
    public void status200() {
