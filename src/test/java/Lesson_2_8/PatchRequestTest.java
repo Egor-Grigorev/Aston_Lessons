@@ -1,41 +1,24 @@
 package Lesson_2_8;
+
 import org.hamcrest.CoreMatchers;
 import org.junit.jupiter.api.Test;
 
-import static io.restassured.RestAssured.given;
+import static io.restassured.RestAssured.*;
 import static org.hamcrest.Matchers.equalTo;
 
-public class PatchRequestTest {
+public class PatchRequestTest extends BaseClass {
 
-   /* @Test
-    public void testPatchResponseWithFluentAPI() {
-        RestAssured.baseURI = "https://postman-echo.com";
-
-        given()
-                .contentType(ContentType.TEXT)
-                .body("This is expected to be sent back as part of response body.")
-                .when()
-                .patch("/patch")
-                .then()
-                .statusCode(200) // Проверка статус кода
-                .body("data", equalTo("This is expected to be sent back as part of response body."));
-    }*/
-   @Test
-   public void status200() {
-       given()
-               .when()
-               .patch("https://postman-echo.com/patch")
-               .then()
-               .statusCode(200);
-   }
     @Test
-    public void testBody(){
+    public void testBody() {
         given()
+                .log().all()
                 .header("Content-Type", "application/json")
                 .body("This is expected to be sent back as part of response body")
                 .when()
-                .patch("https://postman-echo.com/patch")
+                .patch("/patch")
                 .then()
+                .log().all()
+                .statusCode(200)
                 .body("data", CoreMatchers.equalTo("This is expected to be sent back as part of response body"))
                 .body("headers.host", equalTo("postman-echo.com"));
     }
