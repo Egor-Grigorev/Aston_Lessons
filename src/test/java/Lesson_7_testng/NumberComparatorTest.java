@@ -1,53 +1,24 @@
 package Lesson_7_testng;
 
-import org.example.Lesson_2_7.ArithmeticOperations;
-import org.example.Lesson_2_7.NumberComparator;
-import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import static org.example.Lesson_2_7.NumberComparator.numberComparator;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class NumberComparatorTest {
 
-    //----------------------------------------------------------1
     @Test(description = "А больше")
     public void testNumberAMore() {
-        //Arrange (подготовка)
-        int a, b;
-        a = 1000;
-        b = 500;
-        // Act (действие)
-        String result = NumberComparator.numberComparator(a, b);
-        // Assert (проверка)
-        assertEquals(a + " больше, чем " + b, result);
+        assertEquals(1000 + " больше, чем " + 500, numberComparator(1000, 500));
     }
 
-
-    //----------------------------------------------------------2
     @Test(description = "А меньше")
     public void testNumberBMore() {
-        //Arrange (подготовка)
-        int a, b;
-        a = 1;
-        b = 500;
-        // Act (действие)
-        String result = NumberComparator.numberComparator(a, b);
-        // Assert (проверка)
-        assertEquals(a + " меньше, чем " + b, result);
+        assertEquals(1 + " меньше, чем " + 500, numberComparator(1, 500));
     }
 
-
-    //----------------------------------------------------------3
     @Test(description = "А =")
     public void testNumberAEquallyB() {
-        //Arrange (подготовка)
-        int a, b;
-        a = 1000;
-        b = 1000;
-        // Act (действие)
-        String result = NumberComparator.numberComparator(a, b);
-        // Assert (проверка)
-        assertEquals(a + " равно " + b, result);
+        assertEquals(1000 + " равно " + 1000, numberComparator(1000, 1000));
     }
-
 }
