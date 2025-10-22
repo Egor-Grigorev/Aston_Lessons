@@ -1,9 +1,8 @@
 package Lesson_7_testng;
 
 import org.testng.annotations.Test;
-
 import static org.example.Lesson_2_7.NumberComparator.numberComparator;
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.testng.AssertJUnit.assertEquals;
 
 public class NumberComparatorTest {
 
