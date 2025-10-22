@@ -1,7 +1,7 @@
 package org.example.Lesson_2_7;
 
 public class NumberComparator {
-    public static String numberComparator (int a, int b){
+    public static String numberComparator(int a, int b) {
 
         if (a > b) {
             return a + " больше, чем " + b;
@@ -10,6 +10,5 @@ public class NumberComparator {
         } else {
             return (a + " равно " + b);
         }
-
     }
 }
