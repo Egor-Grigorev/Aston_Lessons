@@ -1,6 +1,7 @@
 package Lesson_2_10;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import io.qameta.allure.*;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
@@ -9,6 +10,12 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import java.time.Duration;
 
+
+@Epic("4")
+@Feature("4")
+@Story("4")
+@Owner("qa")
+@Severity(SeverityLevel.NORMAL)
 public class TestMTS4 {
     private WebDriver driver;
     private HomePage homePage;

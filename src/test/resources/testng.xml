@@ -1,0 +1,20 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="UI suite" verbose="1" parallel="false">
+
+    <listeners>
+        <listener class-name="io.qameta.allure.testng.AllureTestNg"/>
+    </listeners>
+
+    <test name="All tests">
+        <classes>
+            <class name="Lesson_2_10.TestMTS1"/>
+            <class name="Lesson_2_10.TestMTS2"/>
+            <class name="Lesson_2_10.TestMTS3"/>
+            <class name="Lesson_2_10.TestMTS4"/>
+            <class name="Lesson_2_10.TestMTS5"/>
+            <class name="Lesson_2_10.TestMTS6"/>
+            <!-- добавляй остальные классы здесь -->
+        </classes>
+    </test>
+
+</suite>
