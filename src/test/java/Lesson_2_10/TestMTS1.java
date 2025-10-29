@@ -14,8 +14,7 @@ import java.time.Duration;
 @Feature("Главная страница")
 @Owner("qa")
 @Severity(SeverityLevel.NORMAL)
-// Если не используешь testng.xml — раскомментируй слушатель ниже:
-// @Listeners({io.qameta.allure.testng.AllureTestNg.class})
+
 public class TestMTS1 {
 
     private WebDriver driver;
