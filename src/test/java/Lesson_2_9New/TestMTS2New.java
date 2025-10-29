@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 
 
 public class TestMTS2New extends Base {
-@Test
+    @Test
     public void test2() {
 
         WebElement visaLogo = driver.findElement(By.xpath("//img[@alt='Visa']"));

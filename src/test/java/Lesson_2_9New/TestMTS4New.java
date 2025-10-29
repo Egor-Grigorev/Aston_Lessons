@@ -1,21 +1,16 @@
 package Lesson_2_9New;
 
-import Lesson_2_9New.Base;
-import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import java.time.Duration;
 
 public class TestMTS4New extends Base {
 
 
-@Test
-        public void test4() {
+    @Test
+    public void test4() {
         WebElement phoneNumber = driver.findElement(By.xpath("//input [@placeholder='Номер телефона']"));
         phoneNumber.click();
         phoneNumber.sendKeys("297777777");
